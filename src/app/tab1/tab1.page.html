@@ -6,9 +6,9 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" color='light'>
+<ion-content [fullscreen]="true" color="oliva">
 
-  <div class="container-fluid">
+  <div class="container-fluid" color="oliva-light">
 
     <ion-searchbar placeholder="Buscar"></ion-searchbar>
 
@@ -16,7 +16,7 @@
 
       <ion-item-sliding>
 
-        <ion-item lines="full">
+        <ion-item lines="full" color="oliva-light">
           <ion-thumbnail slot="start">
             <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/dkokENeY5Ka30BFgWAqk14mbnGs.jpg">
           </ion-thumbnail>
@@ -27,14 +27,14 @@
               <p>Animação, Comédia, Fantasia</p>
             </div>
           </ion-label>
-          <ion-chip>
-            <ion-label color="success" outline>76</ion-label>
+          <ion-chip color="success-dark">
+            <ion-label  outline>76</ion-label>
           </ion-chip>
 
         </ion-item>
 
         <ion-item-options side="end">
-          <ion-item-option color="laranja" (click)="exibirAlertaFavorito()">
+          <ion-item-option color="oliva-medium" (click)="exibirAlertaFavorito()">
             <ion-icon slot="icon-only" name="star"></ion-icon>
           </ion-item-option>
         </ion-item-options>
@@ -42,7 +42,7 @@
 
       <ion-item-sliding>
 
-        <ion-item lines="full">
+        <ion-item lines="full" color="oliva-light">
           <ion-thumbnail slot="start">
             <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/udaLIJ6Na7GOHjvTlyP9JFPTccv.jpg">
           </ion-thumbnail>
@@ -53,14 +53,40 @@
               <p>Comédia, Action & Adventure, Animação, Kids</p>
             </div>
           </ion-label>
-          <ion-chip>
-            <ion-label color="success" outline>66</ion-label>
+          <ion-chip color="success-dark">
+            <ion-label outline>66</ion-label>
           </ion-chip>
 
         </ion-item>
 
         <ion-item-options side="end">
-          <ion-item-option color="laranja" (click)="exibirAlertaFavorito()">
+          <ion-item-option color="oliva-medium" (click)="exibirAlertaFavorito()">
+            <ion-icon slot="icon-only" name="star"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+
+      <ion-item-sliding>
+
+        <ion-item lines="full" color="oliva-light">
+          <ion-thumbnail slot="start">
+            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ubwR6cwNEc4YAJGrzdND3qEsify.jpg">
+          </ion-thumbnail>
+          <ion-label class="ion-text-wrap">
+            <div>
+              <h1>Liga da Justiça (2001)</h1>
+              <p>24m</p>
+              <p>Action & Adventure, Animação, Sci-Fi & Fantasy</p>
+            </div>
+          </ion-label>
+          <ion-chip color="success-dark">
+            <ion-label outline>81</ion-label>
+          </ion-chip>
+
+        </ion-item>
+
+        <ion-item-options side="end">
+          <ion-item-option color="oliva-medium" (click)="exibirAlertaFavorito()">
             <ion-icon slot="icon-only" name="star"></ion-icon>
           </ion-item-option>
         </ion-item-options>
