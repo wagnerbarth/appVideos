@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AlertController, SelectValueAccessor } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
+import { IFilme } from '../models/IFilme.modules';
 
 @Component({
   selector: 'app-tab1',
@@ -8,6 +9,35 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+
+  titulo = 'Videos';
+
+  listaVideos: IFilme[] = [
+    {
+      nome: 'Pets Monstruosos (2021)',
+      lancamento: '02/04/2021',
+      duração: '6m',
+      classificacao: 76,
+      cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/dkokENeY5Ka30BFgWAqk14mbnGs.jpg',
+      generos: ['Animação', 'Comédia', 'Fantasia']
+    },
+    {
+      nome: 'Os Jovens Titãs em Ação (2013)',
+      lancamento: '2013',
+      duração: '11m',
+      classificacao: 66,
+      cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/udaLIJ6Na7GOHjvTlyP9JFPTccv.jpg',
+      generos: ['Comédia', 'Action & Adventure', 'Animação', 'Kids']
+    },
+    {
+      nome: 'Liga da Justiça (2001)',
+      lancamento: '2001',
+      duração: '24m',
+      classificacao: 81,
+      cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ubwR6cwNEc4YAJGrzdND3qEsify.jpg',
+      generos: ['Action & Adventure', 'Animação', 'Sci-Fi & Fantasy']
+    }
+  ];
 
   constructor(
     private alertController: AlertController,
