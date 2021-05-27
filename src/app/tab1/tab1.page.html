@@ -14,73 +14,21 @@
 
     <ion-list>
 
-      <ion-item-sliding>
+      <ion-item-sliding *ngFor="let filme of listaVideos">
 
         <ion-item lines="full" color="oliva-light">
           <ion-thumbnail slot="start">
-            <img src="">
+            <img [src]="filme.cartaz"> <!--o atributo src entre colchetes utiliza a variável property binding-->
           </ion-thumbnail>
           <ion-label class="ion-text-wrap">
             <div>
-              <h1></h1>
-              <p></p>
-              <p></p>
+              <h1>{{filme.nome}}</h1>
+              <p>{{filme.lancamento}} - {{filme.duracao}}</p>
+              <ion-badge color="oliva-medium" *ngFor="let genero of filme.generos">{{genero}}</ion-badge>
             </div>
           </ion-label>
           <ion-chip color="success-dark">
-            <ion-label  outline>76</ion-label>
-          </ion-chip>
-
-        </ion-item>
-
-        <ion-item-options side="end">
-          <ion-item-option color="oliva-medium" (click)="exibirAlertaFavorito()">
-            <ion-icon slot="icon-only" name="star"></ion-icon>
-          </ion-item-option>
-        </ion-item-options>
-      </ion-item-sliding>
-
-      <ion-item-sliding>
-
-        <ion-item lines="full" color="oliva-light">
-          <ion-thumbnail slot="start">
-            <img src="">
-          </ion-thumbnail>
-          <ion-label class="ion-text-wrap">
-            <div>
-              <h1></h1>
-              <p></p>
-              <p></p>
-            </div>
-          </ion-label>
-          <ion-chip color="success-dark">
-            <ion-label outline></ion-label>
-          </ion-chip>
-
-        </ion-item>
-
-        <ion-item-options side="end">
-          <ion-item-option color="oliva-medium" (click)="exibirAlertaFavorito()">
-            <ion-icon slot="icon-only" name="star"></ion-icon>
-          </ion-item-option>
-        </ion-item-options>
-      </ion-item-sliding>
-
-      <ion-item-sliding>
-
-        <ion-item lines="full" color="oliva-light">
-          <ion-thumbnail slot="start">
-            <img src="">
-          </ion-thumbnail>
-          <ion-label class="ion-text-wrap">
-            <div>
-              <h1></h1>
-              <p></p>
-              <p></p>
-            </div>
-          </ion-label>
-          <ion-chip color="success-dark">
-            <ion-label outline></ion-label>
+            <ion-label  outline>{{filme.classificacao}}</ion-label>
           </ion-chip>
 
         </ion-item>

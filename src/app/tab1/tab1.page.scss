@@ -1,5 +1,6 @@
  ion-list {
    background-color: #ada860;
+
    ion-item {
 
      --pading-start: 10px;
@@ -27,6 +28,12 @@
        padding-inline: 7px;
        //--background: #7ef5c7;
        text-decoration-color: black;
+     }
+
+     ion-badge {
+       font-weight: 300;
+       font-size: 0.6rem;
+       margin-right: 2px;
      }
    }
  }
