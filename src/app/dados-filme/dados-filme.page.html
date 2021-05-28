@@ -1,9 +1,27 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>dados-filme</ion-title>
+<ion-header [translucent]="true">
+  <ion-toolbar color='dark'>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Dados do filme</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true" color="oliva">
+
+  <ion-card *ngIf="filme" color="oliva-light">
+    <ion-card-header>
+      <img [src]="filme.cartaz">
+    </ion-card-header>
+
+    <ion-card-content>
+      <h1>{{filme.nome}} - <ion-chip color="success-dark">{{filme.classificacao}}%</ion-chip>
+      </h1>
+      <p>{{filme.lancamento}} - {{filme.duracao}}</p>
+    </ion-card-content>
+    <ion-item color="oliva-light">
+      <ion-badge color="oliva-medium" *ngFor="let genero of filme.generos">{{genero}}</ion-badge>
+    </ion-item>
+  </ion-card>
 
 </ion-content>
