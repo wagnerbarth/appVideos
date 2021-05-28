@@ -19,7 +19,8 @@ export class Tab1Page {
       duracao: '6m',
       classificacao: 76,
       cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/dkokENeY5Ka30BFgWAqk14mbnGs.jpg',
-      generos: ['Animação', 'Comédia', 'Fantasia']
+      generos: ['Animação', 'Comédia', 'Fantasia'],
+      pagina: '/pets-monstruosos'
     },
     {
       nome: 'Os Jovens Titãs em Ação (2013)',
@@ -27,7 +28,8 @@ export class Tab1Page {
       duracao: '11m',
       classificacao: 66,
       cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/udaLIJ6Na7GOHjvTlyP9JFPTccv.jpg',
-      generos: ['Comédia', 'Action & Adventure', 'Animação', 'Kids']
+      generos: ['Comédia', 'Action & Adventure', 'Animação', 'Kids'],
+      pagina: '/jovens-titans'
     },
     {
       nome: 'Liga da Justiça (2001)',
@@ -35,7 +37,8 @@ export class Tab1Page {
       duracao: '24m',
       classificacao: 81,
       cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ubwR6cwNEc4YAJGrzdND3qEsify.jpg',
-      generos: ['Action & Adventure', 'Animação', 'Sci-Fi & Fantasy']
+      generos: ['Action & Adventure', 'Animação', 'Sci-Fi & Fantasy'],
+      pagina: '/liga-justica'
     }
   ];
 

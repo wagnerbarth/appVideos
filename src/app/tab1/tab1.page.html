@@ -16,7 +16,7 @@
 
       <ion-item-sliding *ngFor="let filme of listaVideos">
 
-        <ion-item lines="full" color="oliva-light">
+        <ion-item lines="full" color="oliva-light" [routerLink]='filme.pagina'>
           <ion-thumbnail slot="start">
             <img [src]="filme.cartaz"> <!--o atributo src entre colchetes utiliza a variável property binding-->
           </ion-thumbnail>
