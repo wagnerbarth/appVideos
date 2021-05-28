@@ -1,24 +1,30 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-title>
       Sobre
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" color="oliva">
 
-  <div class="card">
-    <img src="https://barth.com.br/blog/wp-content/uploads/2012/01/Barth-Netcon20151-240x300.jpg" class="card-img-top"
-      alt="foto Wagner Antonio Barth">
-    <div class="card-body text-center">
+  <ion-card color="oliva-light">
+    <ion-card-header>
+      <h2 class="ion-text-center">Wagner Antonio Barth</h2>
+    </ion-card-header>
 
-      <p class="h5 text-primary">Wagner Antonio Barth</p>
-      <p>Prof.: Etec Jardim Ângela</p>
-      <a href="mailto:wagner.barth@etec.so.gov.br" class="badge badge-light">wagner.barth@etec.sp.gov.br</a>
-
-
+    <ion-card-content>
+      <img src="https://barth.com.br/blog/wp-content/uploads/2012/01/Barth-Netcon20151-240x300.jpg"
+        class="card-img-top">
+    </ion-card-content>
+    <div color="oliva-light" class="ion-text-center">
+      <a href="mailto:wagner.barth@etec.so.gov.br">
+        <ion-badge color="oliva-medium">wagner.barth@etec.sp.gov.br</ion-badge>
+      </a> 
     </div>
-  </div>
+    <div color="oliva-light"  class="ion-text-center">
+      <ion-badge color="oliva-medium">Prof.: Etec Jardim Ângela</ion-badge>
+    </div>
+  </ion-card>
 
 </ion-content>

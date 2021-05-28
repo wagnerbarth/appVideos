@@ -22,7 +22,6 @@ export class Tab1Page {
       classificacao: 76,
       cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/dkokENeY5Ka30BFgWAqk14mbnGs.jpg',
       generos: ['Animação', 'Comédia', 'Fantasia'],
-      pagina: '/pets-monstruosos'
     },
     {
       nome: 'Os Jovens Titãs em Ação (2013)',
@@ -31,7 +30,6 @@ export class Tab1Page {
       classificacao: 66,
       cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/udaLIJ6Na7GOHjvTlyP9JFPTccv.jpg',
       generos: ['Comédia', 'Action & Adventure', 'Animação', 'Kids'],
-      pagina: '/jovens-titans'
     },
     {
       nome: 'Liga da Justiça (2001)',
@@ -40,7 +38,22 @@ export class Tab1Page {
       classificacao: 81,
       cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ubwR6cwNEc4YAJGrzdND3qEsify.jpg',
       generos: ['Action & Adventure', 'Animação', 'Sci-Fi & Fantasy'],
-      pagina: '/liga-justica'
+    },
+    {
+      nome: 'Esquadrão Trovão (2021)',
+      lancamento: '09/04/2021 (BR',
+      duracao: '1h 47m',
+      classificacao: 58,
+      cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/Aej7rR73kpAKce6XXBLeqijAwPD.jpg',
+      generos: ['Ação', 'Aventura', 'Comédia'],
+    },
+    {
+      nome: 'Colheita Maldita (1984)',
+      lancamento: '09/03/1984 (US)',
+      duracao: '1h 33m',
+      classificacao: 57,
+      cartaz: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/owGZCAje2VKrGGdwxM7peVwhErx.jpg',
+      generos: ['Terror', 'Thriller'],
     }
   ];
 
