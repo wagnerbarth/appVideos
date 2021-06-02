@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController, SelectValueAccessor } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
-import { IFilme } from '../models/IFilme.modules';
+import { IFilme } from '../models/IFilme.model';
 import { DadosService } from '../services/dados.service';
 
 @Component({
