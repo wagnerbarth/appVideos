@@ -79,8 +79,10 @@ export class Tab1Page implements OnInit {
           console.log('Generos: ', dados);
           dados.genres.forEach((genero) => {
             this.generos[genero.id] = genero.name;
-           });
+          });
         });
+
+    this.dadosService.guardarDados('generos', this.generos);
   }
 
   buscarFilmes(evento: any) {
