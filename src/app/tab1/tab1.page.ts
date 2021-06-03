@@ -1,18 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AlertController, SelectValueAccessor } from '@ionic/angular';
+import { AlertController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
 import { IFilme } from '../models/IFilme.model';
+import { IFilmeApi, IListaFilmes } from '../models/IFilmeApi.model';
 import { DadosService } from '../services/dados.service';
+import { FilmeService } from '../services/filme.service';
+import { GeneroService } from '../services/genero.service';
 
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss']
 })
-export class Tab1Page {
+export class Tab1Page implements OnInit {
 
-  titulo = 'Videos';
+  titulo = 'Filmes';
 
   listaVideos: IFilme[] = [
     {
@@ -57,14 +60,42 @@ export class Tab1Page {
     }
   ];
 
+  listaFilmes: IListaFilmes;
+  generos: string[] = [];
+
   constructor(
     private alertController: AlertController,
     private toastController: ToastController,
     private dadosService: DadosService,
-    private router: Router
+    private router: Router,
+    private filmeService: FilmeService,
+    private generoService: GeneroService
   ) { }
 
-  exibirFilme(filme: IFilme) {
+  ngOnInit() {
+    this.generoService.buscarGeneros()
+      .subscribe(
+        (dados) => {
+          console.log('Generos: ', dados);
+          dados.genres.forEach((genero) => {
+            this.generos[genero.id] = genero.name;
+           });
+        });
+  }
+
+  buscarFilmes(evento: any) {
+    console.log(evento.target.value);
+    const busca = evento.target.value;
+    if (busca && busca.trim() !== '') {
+      this.filmeService.buscarFilmes(busca)
+        .subscribe((dados) => {
+          console.log(dados);
+          this.listaFilmes = dados;
+        });
+    }
+  }
+
+  exibirFilme(filme: IFilmeApi) {
     this.dadosService.guardarDados('filme', filme);
     this.router.navigateByUrl('/dados-filme');
   }

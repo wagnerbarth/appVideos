@@ -9,6 +9,11 @@
      ion-thumbnail {
        height: 100%;
        margin-inline-end: 10px;
+
+       ion-icon {
+         font-size: 48px;
+         color: #dcdcdc
+       }
      }
 
      h1 {
@@ -25,9 +30,15 @@
      }
 
      ion-chip {
-       padding-inline: 7px;
+       padding-inline: 0;
        //--background: #7ef5c7;
        text-decoration-color: black;
+       width: 48px;
+       height: 48px;
+       border-radius: 50%;
+       justify-content: center;
+       border-width: 3px;
+
      }
 
      ion-badge {
