@@ -91,30 +91,37 @@
   --ion-color-oliva-shade: #717100;
   --ion-color-oliva-tint: #8d8d1a;
 
-/** oliva-medium **/
-    --ion-color-oliva-medium: #ada860;
-    --ion-color-oliva-medium-rgb: 173,168,96;
-    --ion-color-oliva-medium-contrast: #000000;
-    --ion-color-oliva-medium-contrast-rgb: 0,0,0;
-    --ion-color-oliva-medium-shade: #989454;
-    --ion-color-oliva-medium-tint: #b5b170;
-  
-  /** oliva-light **/
-    --ion-color-oliva-light: #d8d3ae;
-    --ion-color-oliva-light-rgb: 216,211,174;
-    --ion-color-oliva-light-contrast: #000000;
-    --ion-color-oliva-light-contrast-rgb: 0,0,0;
-    --ion-color-oliva-light-shade: #beba99;
-    --ion-color-oliva-light-tint: #dcd7b6;
+  /** oliva-medium **/
+  --ion-color-oliva-medium: #ada860;
+  --ion-color-oliva-medium-rgb: 173, 168, 96;
+  --ion-color-oliva-medium-contrast: #000000;
+  --ion-color-oliva-medium-contrast-rgb: 0, 0, 0;
+  --ion-color-oliva-medium-shade: #989454;
+  --ion-color-oliva-medium-tint: #b5b170;
 
-/** success-dark **/
-      --ion-color-success-dark: #009921;
-      --ion-color-success-dark-rgb: 0,153,33;
-      --ion-color-success-dark-contrast: #ffffff;
-      --ion-color-success-dark-contrast-rgb: 255,255,255;
-      --ion-color-success-dark-shade: #00871d;
-      --ion-color-success-dark-tint: #1aa337;
-    
+  /** oliva-light **/
+  --ion-color-oliva-light: #d8d3ae;
+  --ion-color-oliva-light-rgb: 216, 211, 174;
+  --ion-color-oliva-light-contrast: #000000;
+  --ion-color-oliva-light-contrast-rgb: 0, 0, 0;
+  --ion-color-oliva-light-shade: #beba99;
+  --ion-color-oliva-light-tint: #dcd7b6;
+
+  /** success-dark **/
+  --ion-color-success-dark: #009921;
+  --ion-color-success-dark-rgb: 0, 153, 33;
+  --ion-color-success-dark-contrast: #ffffff;
+  --ion-color-success-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-success-dark-shade: #00871d;
+  --ion-color-success-dark-tint: #1aa337;
+
+  /** black **/
+  --ion-color-black: #000000;
+  --ion-color-black-rgb: 0, 0, 0;
+  --ion-color-black-contrast: #ffffff;
+  --ion-color-black-contrast-rgb: 255, 255, 255;
+  --ion-color-black-shade: #000000;
+  --ion-color-black-tint: #1a1a1a;
 }
 
 // bloco de classes das cores custom
@@ -163,4 +170,11 @@
   --ion-color-tint: var(--ion-color-success-dark-tint);
 }
 
-
+.ion-color-black {
+  --ion-color-base: var(--ion-color-black);
+  --ion-color-base-rgb: var(--ion-color-black-rgb);
+  --ion-color-contrast: var(--ion-color-black-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-black-contrast-rgb);
+  --ion-color-shade: var(--ion-color-black-shade);
+  --ion-color-tint: var(--ion-color-black-tint);
+}
