@@ -1,0 +1,55 @@
+<ion-content [fullscreen]="true">
+  <div class="center ion-padding-top">
+    <ion-card color="black">
+
+      <ion-card-title class="ion-text-center ion-padding-top">Registro de Usuário</ion-card-title>
+
+      <ion-item lines="none" color="black">
+        <ion-label position="floating">Nome</ion-label>
+        <ion-input type="text" [(ngModel)]='registro.nome'></ion-input>
+      </ion-item>
+
+      <ion-item lines="none" color="black">
+        <ion-label position="floating">CPF</ion-label>
+        <ion-input type="text" [(ngModel)]='registro.cpf'></ion-input>
+      </ion-item>
+
+      <ion-item lines="none" color="black">
+        <ion-label position="floating">Data Nascimento</ion-label>
+        <ion-input type="text" [(ngModel)]='registro.dataNascimento'></ion-input>
+      </ion-item>
+
+      <ion-list>
+        <ion-radio-group [(ngModel)]="registro.genero">
+          <ion-list-header  color="black">
+            <ion-label>Gênero</ion-label>
+          </ion-list-header>
+          <ion-item lines="none" color="black">
+            <ion-label>Masc</ion-label>
+            <ion-radio value="M"></ion-radio>
+            <ion-label class="ion-padding-start">Fem</ion-label>
+            <ion-radio value="F"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+
+      <ion-item lines="none" color="black">
+        <ion-label position="floating">E-mail</ion-label>
+        <ion-input type="email" [(ngModel)]='registro.email'></ion-input>
+      </ion-item>
+
+      <ion-item lines="none" color="black">
+        <ion-label position="floating">Senha</ion-label>
+        <ion-input type="senha" [(ngModel)]='registro.senha'></ion-input>
+      </ion-item>
+
+      <ion-item lines="none" color="black">
+        <ion-label position="floating">Cormirmar Senha</ion-label>
+        <ion-input type="senha" [(ngModel)]='confirmaSenha'></ion-input>
+      </ion-item>
+
+      <ion-button expand="full" fill="outline" color="light" (click)="registrar()">Registrar</ion-button>
+      <ion-button expand="full" fill="clear" color="light" (click)="testarUsuario()">Testar</ion-button>
+    </ion-card>
+  </div>
+</ion-content>
