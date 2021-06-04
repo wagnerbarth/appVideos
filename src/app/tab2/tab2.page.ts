@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController, ToastController } from '@ionic/angular';
 import { DadosService } from '../services/dados.service';
-import { FilmeService } from '../services/filme.service';
 import { GeneroService } from '../services/genero.service';
+import { SerieService } from '../services/serie.service';
 
 @Component({
   selector: 'app-tab2',
@@ -23,7 +23,7 @@ export class Tab2Page implements OnInit{
     private toastController: ToastController,
     private dadosService: DadosService,
     private router: Router,
-    private filmeService: FilmeService,
+    private serieService: SerieService,
     private generoService: GeneroService
   ) { }
 
@@ -44,7 +44,7 @@ export class Tab2Page implements OnInit{
     console.log(evento.target.value);
     const busca = evento.target.value;
     if (busca && busca.trim() !== '') {
-      this.filmeService.buscarTv(busca)
+      this.serieService.buscarTv(busca)
         .subscribe((dados) => {
           console.log(dados);
           this.listaSeries = dados;
@@ -64,7 +64,7 @@ export class Tab2Page implements OnInit{
       buttons: [
         {
           text: 'Cancelar',
-          role: 'cancel', // regar de cancelamento
+          role: 'cancel', // regra de cancelamento
           handler: (blah) => { // acionado ao cancel
             console.log('Confirm Cancel: blah');
           }

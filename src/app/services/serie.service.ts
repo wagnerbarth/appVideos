@@ -1,15 +1,14 @@
+import { IListaSeries } from './../models/ISerieApi.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
-import { IListaFilmes } from '../models/IFilmeApi.model';
 import { ToastController } from '@ionic/angular';
 import { Observable } from 'rxjs';
-import { map, catchError } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
-export class FilmeService {
+export class SerieService {
 
   lingua = 'pt-BR';
   regiao = 'BR';
@@ -22,15 +21,16 @@ export class FilmeService {
     private toastController: ToastController
   ) { }
 
-  buscarFilmes(busca: string): Observable<IListaFilmes> {
-    const url = `${this.apiURL}/search/movie${this.key}&language=${this.lingua}&regions=${this.regiao}&query=${busca}`;
+  buscarTv(busca: string): Observable<IListaSeries> {
+    const url = `${this.apiURL}/search/tv${this.key}&language=${this.lingua}&regions=${this.regiao}&query=${busca}`;
 
-    return this.http.get<IListaFilmes>(url)
+    return this.http.get<IListaSeries>(url)
       .pipe(
         map((retorno) => retorno), // retorna ele mesmo
         catchError((erro) => this.exibirErro(erro))
       );
   }
+
 
   async exibirErro(erro: any) {
     const toast = await this.toastController.create({
@@ -42,6 +42,4 @@ export class FilmeService {
     toast.present();
     return null; // para não dar erro
   }
-
-
 }
