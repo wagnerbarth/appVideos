@@ -17,9 +17,9 @@
     </ion-card-header>
 
     <ion-card-content>
-      <h1>{{filme.title}} - <ion-chip [color]="filme.vote_average < 5 ? 'danger' : ((filme.vote_average < 7 ? 'warning' : 'success'))">{{filme.vote_average}}</ion-chip>
+      <h1>{{filme.title || serie.name}} <ion-chip [color]="filme.vote_average < 5 ? 'danger' : ((filme.vote_average < 7 ? 'warning' : 'success'))">{{filme.vote_average}}</ion-chip>
       </h1>
-      <p>{{filme.release_date | date:'shortDate'}}</p>
+      <p>{{filme.release_date || serie.first_air_date | date:'shortDate'}}</p>
     </ion-card-content>
     <ion-item color="oliva-light">
       <ion-badge color="oliva-medium" *ngFor="let idGenero of filme.genre_ids">{{generos[idGenero]}}</ion-badge>

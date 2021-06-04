@@ -32,6 +32,17 @@ export class FilmeService {
       );
   }
 
+  buscarTv(busca: string): Observable<IListaFilmes> {
+    const url = `${this.apiURL}/search/tv${this.key}&language=${this.lingua}&regions=${this.regiao}&query=${busca}`;
+
+    return this.http.get<IListaFilmes>(url)
+      .pipe(
+        map((retorno) => retorno), // retorna ele mesmo
+        catchError((erro) => this.exibirErro(erro))
+      );
+  }
+
+
   async exibirErro(erro: any) {
     const toast = await this.toastController.create({
       message: 'Erro ao consultar API. ' + JSON.stringify(erro),

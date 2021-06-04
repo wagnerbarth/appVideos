@@ -16,7 +16,10 @@ export class LoginPage implements OnInit {
   constructor(
     private toastController: ToastController,
     private router: Router
-  ) { }
+  ) {
+    this.email = 'admin@admin.com';
+    this.senha = 'admin';
+  }
 
   ngOnInit() {
   }
